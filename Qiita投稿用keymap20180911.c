@@ -723,11 +723,8 @@ void matrix_init_user(void) {
 
 	// レイヤーを0に戻す.
 	//		https://github.com/qmk/qmk_firmware/blob/master/tmk_core/common/action_layer.c
-//	layer_clear();
-//			clear_keyboard();
-//			clear_mods();
-//	default_layer_set(0);
-//	layer_move(BASEPlate);
+	eeconfig_update_default_layer(0);
+	default_layer_set(0);
 };
 
 // Runs constantly in the background, in a loop.
