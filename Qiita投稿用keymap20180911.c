@@ -5,9 +5,9 @@
 
 
 
-/*	“ú–{ŒêƒL[ƒ{[ƒh—p‚Ìƒwƒbƒ_ƒtƒ@ƒCƒ‹ */
+/*	æ—¥æœ¬èªã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ç”¨ã®ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ« */
 #include "keymap_jp.h"
-//		JP_ZHTG‚Í,”¼Šp‘SŠpƒ{ƒ^ƒ“‚ç‚µ‚¢.‚µ‚©‚µ,OS‘¤‚Å,ƒL[ƒ{[ƒh‚Ìí—Ş‚ğ‰pŒê”Å‚Å‚Í‚È‚­,“ú–{Œê‚É‚µ‚È‚¯‚ê‚Î‚È‚ç‚È‚¢‚Ì‚©‚à‚µ‚ê‚È‚¢.(‰pŒê”Å‚Å‚Í,‚¤‚Ü‚­“®‚¢‚Ä‚­‚ê‚È‚¢‚©‚ç‚È)
+//		JP_ZHTGã¯,åŠè§’å…¨è§’ãƒœã‚¿ãƒ³ã‚‰ã—ã„.ã—ã‹ã—,OSå´ã§,ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®ç¨®é¡ã‚’è‹±èªç‰ˆã§ã¯ãªã,æ—¥æœ¬èªã«ã—ãªã‘ã‚Œã°ãªã‚‰ãªã„ã®ã‹ã‚‚ã—ã‚Œãªã„.(è‹±èªç‰ˆã§ã¯,ã†ã¾ãå‹•ã„ã¦ãã‚Œãªã„ã‹ã‚‰ãª)
 
 
 #define BASEPlate 0 // default layer
@@ -64,30 +64,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASEPlate] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
-		GUI_T( M(2) ),	KC_1,	KC_2,	KC_3,	KC_4,	KC_5,	KC_DELETE,			/* 7Œ…	*/
-		KC_TAB,	KC_Q,	KC_W,	KC_E,	KC_R,	KC_T,	JAP,						/* 7Œ…	*/
-		LT(MOUSEPlate, KC_BSPACE),	KC_A,	KC_S,	KC_D,	KC_F,	KC_G,			/* 6Œ…	*/
-		KC_LSHIFT,	KC_Z,	KC_X,	KC_C,	KC_V,	KC_B,	KC_NO,					/* 7Œ…	*/
-		KC_GRAVE,	KC_QUOTE,	KC_LALT,	KC_SPACE,	CTL_T(KC_ENTER),			/* 5Œ…	*/
-																/* ew•”•ª	*/
-																KC_TAB,	KC_ESCAPE,							/* 2Œ…	*/
-																			ZEROReturn,						/* 1Œ…	*/
-																LT(ENGPlate, KC_ESCAPE),	KC_LALT,		/* 2Œ…	*/
-																			KC_ENTER,						/* 1Œ…	*/
+		GUI_T( M(2) ),	KC_1,	KC_2,	KC_3,	KC_4,	KC_5,	KC_DELETE,			/* 7æ¡	*/
+		KC_TAB,	KC_Q,	KC_W,	KC_E,	KC_R,	KC_T,	JAP,						/* 7æ¡	*/
+		LT(MOUSEPlate, KC_BSPACE),	KC_A,	KC_S,	KC_D,	KC_F,	KC_G,			/* 6æ¡	*/
+		KC_LSHIFT,	KC_Z,	KC_X,	KC_C,	KC_V,	KC_B,	KC_NO,					/* 7æ¡	*/
+		KC_GRAVE,	KC_QUOTE,	KC_LALT,	KC_SPACE,	CTL_T(KC_ENTER),			/* 5æ¡	*/
+																/* è¦ªæŒ‡éƒ¨åˆ†	*/
+																KC_TAB,	KC_ESCAPE,							/* 2æ¡	*/
+																			ZEROReturn,						/* 1æ¡	*/
+																LT(ENGPlate, KC_ESCAPE),	KC_LALT,		/* 2æ¡	*/
+																			KC_ENTER,						/* 1æ¡	*/
 
 
 
         // right hand
-		KC_BSPACE,	KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_BSLASH,										/* 7Œ…	*/
-		KC_RBRACKET,	KC_Y,	KC_U,	KC_I,	KC_O,	KC_P,	KC_EQUAL,									/* 7Œ…	*/
-			KC_H,	KC_J,	KC_K,	KC_L,	KC_SCOLON,	KC_QUOTE,											/* 6Œ…	*/
-		KC_DELETE,	KC_N,	KC_M,	KC_COMMA,	KC_DOT,	KC_SLASH,	KC_RSHIFT,								/* 7Œ…	*/
-				LT(MOVESPlate, KC_SPACE),	QK_RGUI,	KC_MS_BTN1,	KC_MS_BTN2,	LT(HHKBPlate, KC_ENTER),	/* 5Œ…	*/
-		/* ew•”•ª	*/
-		KC_PSCREEN,	KC_APPLICATION,		/* 2Œ…	*/
-		KC_RBRACKET,					/* 1Œ…	*/
-		KC_TAB,							/* 1Œ…	*/
-			KC_ENTER,	KC_RALT			/* 2Œ…	*/
+		KC_BSPACE,	KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_BSLASH,										/* 7æ¡	*/
+		KC_RBRACKET,	KC_Y,	KC_U,	KC_I,	KC_O,	KC_P,	KC_EQUAL,									/* 7æ¡	*/
+			KC_H,	KC_J,	KC_K,	KC_L,	KC_SCOLON,	KC_QUOTE,											/* 6æ¡	*/
+		KC_DELETE,	KC_N,	KC_M,	KC_COMMA,	KC_DOT,	KC_SLASH,	KC_RSHIFT,								/* 7æ¡	*/
+				LT(MOVESPlate, KC_SPACE),	QK_RGUI,	KC_MS_BTN1,	KC_MS_BTN2,	LT(HHKBPlate, KC_ENTER),	/* 5æ¡	*/
+		/* è¦ªæŒ‡éƒ¨åˆ†	*/
+		KC_PSCREEN,	KC_APPLICATION,		/* 2æ¡	*/
+		KC_RBRACKET,					/* 1æ¡	*/
+		KC_TAB,							/* 1æ¡	*/
+			KC_ENTER,	KC_RALT			/* 2æ¡	*/
 
 ),
 
@@ -150,14 +150,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  *|ZEROReturn|      |      |      |      |      |      |           |      | PgUp | Tab  | Home | End  | SysRq|  Bkspc |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |  '"  |  {   |  -_  |  =+  |  `~  |------|           |------|  ©  |  «  |  ª  |  ¨  |  -_  |  Del   |
+ * |         |  '"  |  {   |  -_  |  =+  |  `~  |------|           |------|  â†  |  â†“  |  â†‘  |  â†’  |  -_  |  Del   |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  LShift |  "   |  }   |  _   |  +   |  ~   |      |           |      | PgDn |  |   |  [{  |  ]}  |  \|  | RShift |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  Ins  |Pause | Caps |ScrLk |LCtrl |                                       | LT1  | RGui |      |      |  \|  |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  Esc | Reset|       | M(2) | TO(5)|		©M(2)‚Í,“ú–{Œê“ü—Í‚ÌƒIƒ“^ƒIƒt(Alt+`)
+ *                                        |  Esc | Reset|       | M(2) | TO(5)|		â†M(2)ã¯,æ—¥æœ¬èªå…¥åŠ›ã®ã‚ªãƒ³ï¼ã‚ªãƒ•(Alt+`)
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
  *                                 | LAlt | LT5  |------|       |------|Enter | Esc  |
@@ -169,11 +169,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // left hand
 		KC_ESCAPE,	KC_F1,	KC_F2,	KC_F3,	KC_F4,	KC_F5,	KC_F11,	
 		ZEROReturn,	 KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
-//		KC_NO,	KC_EXCLAIM,	 KC_AT,	KC_HASH,	KC_DOLLAR,	KC_PERCENT,	KC_NO,		// ©‚¨‚µ2—ñ–Ú20180907
-//		JP_ZHTG,	JP_YEN,	 JP_CIRC,	JP_AT,	JP_COLN,	JP_BSLS,	JP_AMPR,		// ©‚¨‚µ2—ñ–Ú20180907
-//		KC_NO,	 KC_LOCKING_CAPS,	KC_LOCKING_NUM,	KC_LOCKING_SCROLL,	KC_NO,	KC_NO,	KC_NO,		// ©‚¨‚µ2—ñ–Ú
 		KC_NO,	KC_QUOTE,	KC_LEFT_CURLY_BRACE,	KC_MINUS,	KC_EQUAL,	KC_GRAVE,	
-//		KC_KP_7,	KC_CAPSLOCK,	KC_NUMLOCK,	KC_SCROLLLOCK,	KC_NO,	KC_NO,		// ©‚¨‚µ3—ñ–Ú
 		KC_LSHIFT,	KC_DOUBLE_QUOTE,	KC_RIGHT_CURLY_BRACE,	KC_UNDERSCORE,	KC_PLUS,	KC_TILDE,	KC_NO,	
 		KC_INSERT,	KC_PAUSE,	KC_CAPSLOCK,	KC_SLCK,	CTL_T(KC_NO),	
 																KC_ESCAPE,	RESET,	
@@ -202,13 +198,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      | PgUp |  ª  | Home |ZEROReturn|
+ * |        |      |      |      |      |      |      |           |      |      |      | PgUp |  â†‘  | Home |ZEROReturn|
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |------|           |------|      |      |  ©  |  «  |  ¨  |        |
+ * |        |      |      |      |      |      |------|           |------|      |      |  â†  |  â†“  |  â†’  |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |      | PgDn |      | End  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  JAP |      |      |      |  NG  |                                       |      |      |      |      |—\–ñÏ‚İ|
+ *   |  JAP |      |      |      |  NG  |                                       |      |      |      |      |äºˆç´„æ¸ˆã¿|
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      | TO 1 |       | RESET|      |
@@ -479,7 +475,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______,	_______,	_______,	_______,	_______,	_______,	
 		_______,	_______,	_______,	_______,	_______,	_______,	_______,	
 		_______,	_______,	KC_SPACE,	KC_ENTER,	KC_LCTRL,	
-																// ew•”•ª
+																// è¦ªæŒ‡éƒ¨åˆ†
 																_______,	_______,	
 																			ZEROReturn,	
 																LT(JAPPlate, KC_ESCAPE),	_______,	
@@ -493,7 +489,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______,	_______,	_______,	_______,	_______,	_______,	
 		_______,	_______,	_______,	_______,	_______,	_______,	_______,	
 				_______,	_______,	_______,	_______,	LT(HHKBPlate, M(2)),	
-		// ew•”•ª
+		// è¦ªæŒ‡éƒ¨åˆ†
 		LT(TEMP5Plate, KC_NO),	RESET,	
 		TO(TEMP9Plate),	
 		_______,	
@@ -560,7 +556,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * |  `~     | Home |      | End  | PgUp | Tab  |  +   |           |      | VolUp| Lclk |Middle| Rclk |      |  Play  |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | —\–ñÏ‚İ| Del  |      |      | PgDn |      |------|           |------|MsLeft|MsDown| MsUp |MsRght|      |  Stop  |
+ * | äºˆç´„æ¸ˆã¿| Del  |      |      | PgDn |      |------|           |------|MsLeft|MsDown| MsUp |MsRght|      |  Stop  |
  * |---------+------+------+------+------+------|ZERO  |           |      |------+------+------+------+------+--------|
  * |  LShift | TO 1 | TO 2 | TO 4 | TO 5 | TO 6 |Return|           |      | VolDn| Prev | Next |      | Mute | RShift |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -570,7 +566,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | TO 0 | Reset|       |      |      |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      | WWW  | WWW  |
- *                               |      |—\–ñÏ‚İ|------|       |------| Fwd  | Back |
+ *                               |      |äºˆç´„æ¸ˆã¿|------|       |------| Fwd  | Back |
  *                                 |      |      |      |      |wwwHome|      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -633,7 +629,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 
 
 	case 2:
-		if (record->event.pressed) { // “ú–{Œê“ü—Í‚ÌƒIƒ“^ƒIƒti‰pŒê”z—ñj
+		if (record->event.pressed) { // æ—¥æœ¬èªå…¥åŠ›ã®ã‚ªãƒ³ï¼ã‚ªãƒ•ï¼ˆè‹±èªé…åˆ—ï¼‰
 			return MACRO( D(LALT), T(GRAVE), U(LALT), END);
 		}
 		break;
@@ -672,12 +668,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 	case JAP:
 		if (record->event.pressed) {
-			// ƒL[‰Ÿ‰º‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸‹æ™‚ã«å‹•ã
 			default_layer_set(JAPBASEPlate);
 			layer_move(JAPBASEPlate);
 		}
 		else {
-			// ƒL[‰Ÿã‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸Šæ™‚ã«å‹•ã
 		}
 		return false;
 		break;
@@ -685,12 +681,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 	case ENG:
 		if (record->event.pressed) {
-			// ƒL[‰Ÿ‰º‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸‹æ™‚ã«å‹•ã
 	default_layer_set(BASEPlate);
 	layer_move(BASEPlate);
 		}
 		else {
-			// ƒL[‰Ÿã‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸Šæ™‚ã«å‹•ã
 		}
 		return false;
 		break;
@@ -698,12 +694,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 	case ZEROReturn:
 		if (record->event.pressed) {
-			// ƒL[‰Ÿ‰º‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸‹æ™‚ã«å‹•ã
 			layer_clear();
 			default_layer_set(0);
 		}
 		else {
-			// ƒL[‰Ÿã‚É“®‚­
+			// ã‚­ãƒ¼æŠ¼ä¸Šæ™‚ã«å‹•ã
 		}
 		return false;
 		break;
@@ -721,11 +717,11 @@ void matrix_init_user(void) {
 #ifdef RGBLIGHT_COLOR_LAYER_0
 #endif
         #ifdef RGBLIGHT_ENABLE
-		rgblight_enable_noeeprom();	// —LŒø20180901
+		rgblight_enable_noeeprom();	// æœ‰åŠ¹20180901
 		#endif
 
 
-	// ƒŒƒCƒ„[‚ğ0‚É–ß‚·.
+	// ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’0ã«æˆ»ã™.
 	//		https://github.com/qmk/qmk_firmware/blob/master/tmk_core/common/action_layer.c
 //	layer_clear();
 //			clear_keyboard();
@@ -759,14 +755,14 @@ uint32_t layer_state_set_user(uint32_t state) {
         #endif
         break;
       case 1:
-//        ergodox_right_led_1_on();	// Ô
+//        ergodox_right_led_1_on();	// èµ¤
 		DDRB |=  (1<<5);
 		PORTB |=  (1<<5);
 
 
         #ifdef RGBLIGHT_COLOR_LAYER_1
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_1);
-			//	‚±‚±‚Í‚Ç‚Ì‚æ‚¤‚É‚µ‚Äˆ—‚ğ’Ê‚·‚æ‚¤‚É‚·‚ê‚Î‚¢‚¢H
+			//	ã“ã“ã¯ã©ã®ã‚ˆã†ã«ã—ã¦å‡¦ç†ã‚’é€šã™ã‚ˆã†ã«ã™ã‚Œã°ã„ã„ï¼Ÿ
         #endif
 #ifdef RGBLIGHT_ENABLE
 			rgblight_sethsv_at (  0, 255, 50, 0);
@@ -788,7 +784,7 @@ uint32_t layer_state_set_user(uint32_t state) {
 #endif
         break;
       case 2:
-        ergodox_right_led_2_on();	// —Î
+        ergodox_right_led_2_on();	// ç·‘
         #ifdef RGBLIGHT_COLOR_LAYER_2
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_2);
         #endif
@@ -798,7 +794,7 @@ uint32_t layer_state_set_user(uint32_t state) {
 #endif
         break;
       case 3:
-        ergodox_right_led_3_on();	// Â
+        ergodox_right_led_3_on();	// é’
         #ifdef RGBLIGHT_COLOR_LAYER_3
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_3);
         #endif
@@ -822,8 +818,8 @@ uint32_t layer_state_set_user(uint32_t state) {
 #endif
         break;
       case 4:
-        ergodox_right_led_1_on();	// Ô
-        ergodox_right_led_2_on();	// —Î
+        ergodox_right_led_1_on();	// èµ¤
+        ergodox_right_led_2_on();	// ç·‘
         #ifdef RGBLIGHT_COLOR_LAYER_4
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_4);
         #endif
@@ -848,8 +844,8 @@ uint32_t layer_state_set_user(uint32_t state) {
 
         break;
       case 5:
-        ergodox_right_led_1_on();	// Ô
-        ergodox_right_led_3_on();	// Â
+        ergodox_right_led_1_on();	// èµ¤
+        ergodox_right_led_3_on();	// é’
         #ifdef RGBLIGHT_COLOR_LAYER_5
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_5);
         #endif
@@ -874,8 +870,8 @@ uint32_t layer_state_set_user(uint32_t state) {
 
         break;
       case 6:
-        ergodox_right_led_2_on();	// —Î
-        ergodox_right_led_3_on();	// Â
+        ergodox_right_led_2_on();	// ç·‘
+        ergodox_right_led_3_on();	// é’
         #ifdef RGBLIGHT_COLOR_LAYER_6
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_6);
         #endif
@@ -900,9 +896,9 @@ uint32_t layer_state_set_user(uint32_t state) {
 
         break;
       case 7:
-        ergodox_right_led_1_on();	// Ô
-        ergodox_right_led_2_on();	// —Î
-        ergodox_right_led_3_on();	// Â
+        ergodox_right_led_1_on();	// èµ¤
+        ergodox_right_led_2_on();	// ç·‘
+        ergodox_right_led_3_on();	// é’
         #ifdef RGBLIGHT_COLOR_LAYER_7
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_6);
         #endif
