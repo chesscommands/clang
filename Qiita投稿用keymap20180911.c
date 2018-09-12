@@ -11,18 +11,19 @@
 
 
 #define BASEPlate 0 // default layer
-#define JAPBASEPlate 1 // default layer
 
-#define TEMP1Plate 2 // TEMP
-#define MOVESPlate 3 // Move Layer
-#define HHKBPlate 4	// HHKB Layer
-#define ENGPlate 5 // ENG keys
-#define TEMP5Plate 6 // TEMP
-#define JAPPlate 7		// JAP keys
+#define TEMPPlate 1 // TEMP
+#define MOVESPlate 2 // Move Layer
+#define HHKBPlate 3	// HHKB Layer
+#define ENGPlate 4 // ENG keys
+#define TEMQPlate 5 // TEMP
+#define JAPPlate 6		// JAP keys
 
-#define TEMP7Plate 8 // TEMP
+#define TEMRPlate 7 // TEMP
 
-#define TEMP9Plate 9 // TEMP
+#define JAPBASEPlate 8 // default layer
+
+#define TEMSPlate 9 // TEMP
 #define MOUSEPlate 10	// MOUSE Layer
 
 #define MACBASE 16	// Mac Layer
@@ -42,21 +43,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: WindowsBasic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | LGUI   |   1  |   2  |   3  |   4  |   5  |  Del |           | Bkspc|   6  |   7  |   8  |   9  |   0  |   \|   |
+ * | LGUI   |   1  |   2  |   3  |   4  |   5  |  Del |           | Bkspc|   6  |   7  |   8  |   9  |   0  |   ¥|   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |  JAP |           |  ]}  |   Y  |   U  |   I  |   O  |   P  |   =+   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | ~L10   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;: |   '"   |
+ * | ‾L10   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;: |   '"   |
  * |--------+------+------+------+------+------|      |           | Del  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  /?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | `~   |  '"  | LAlt |Space |LCtrl/Enter |                       | L1/Space | RGui |LClick|RClick|  ~L3/Enter |
+ *   | `‾   |  '"  | LAlt |Space |LCtrl/Enter |                       | L1/Space | RGui |LClick|RClick|  ‾L3/Enter |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Tab  | Esc  |       | PrSc |  App |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | ZEROReturn | | ]}   |        |      |
- *                                 | ~L8  |LAlt  |------|       |------|  Enter | RAlt |
+ *                                 | ‾L8  |LAlt  |------|       |------|  Enter | RAlt |
  *                                 | Esc  |      | Enter|       | Tab  |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -114,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 // temp
-[TEMP1Plate] = LAYOUT_ergodox(
+[TEMPPlate] = LAYOUT_ergodox(
 
        // left hand
 		KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
@@ -150,11 +151,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  *|ZEROReturn|      |      |      |      |      |      |           |      | PgUp | Tab  | Home | End  | SysRq|  Bkspc |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |  '"  |  {   |  -_  |  =+  |  `~  |------|           |------|  ←  |  ↓  |  ↑  |  →  |  -_  |  Del   |
+ * |         |  '"  |  {   |  -_  |  =+  |  `‾  |------|           |------|  ←  |  ↓  |  ↑  |  →  |  -_  |  Del   |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |  LShift |  "   |  }   |  _   |  +   |  ~   |      |           |      | PgDn |  |   |  [{  |  ]}  |  \|  | RShift |
+ * |  LShift |  "   |  }   |  _   |  +   |  ‾   |      |           |      | PgDn |  |   |  [{  |  ]}  |  ¥|  | RShift |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  Ins  |Pause | Caps |ScrLk |LCtrl |                                       | LT1  | RGui |      |      |  \|  |
+ *   |  Ins  |Pause | Caps |ScrLk |LCtrl |                                       | LT1  | RGui |      |      |  ¥|  |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |  Esc | Reset|       | M(2) | TO(5)|		←M(2)は,日本語入力のオン／オフ(Alt+`)
@@ -169,13 +170,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // left hand
 		KC_ESCAPE,	KC_F1,	KC_F2,	KC_F3,	KC_F4,	KC_F5,	KC_F11,	
 		ZEROReturn,	 KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
+//		KC_NO,	KC_EXCLAIM,	 KC_AT,	KC_HASH,	KC_DOLLAR,	KC_PERCENT,	KC_NO,		// ←お試し2列目20180907
+//		JP_ZHTG,	JP_YEN,	 JP_CIRC,	JP_AT,	JP_COLN,	JP_BSLS,	JP_AMPR,		// ←お試し2列目20180907
+//		KC_NO,	 KC_LOCKING_CAPS,	KC_LOCKING_NUM,	KC_LOCKING_SCROLL,	KC_NO,	KC_NO,	KC_NO,		// ←お試し2列目
 		KC_NO,	KC_QUOTE,	KC_LEFT_CURLY_BRACE,	KC_MINUS,	KC_EQUAL,	KC_GRAVE,	
+//		KC_KP_7,	KC_CAPSLOCK,	KC_NUMLOCK,	KC_SCROLLLOCK,	KC_NO,	KC_NO,		// ←お試し3列目
 		KC_LSHIFT,	KC_DOUBLE_QUOTE,	KC_RIGHT_CURLY_BRACE,	KC_UNDERSCORE,	KC_PLUS,	KC_TILDE,	KC_NO,	
 		KC_INSERT,	KC_PAUSE,	KC_CAPSLOCK,	KC_SLCK,	CTL_T(KC_NO),	
 																KC_ESCAPE,	RESET,	
 																			KC_NO,	
 																KC_LALT,	KC_NO,	
-																			TO(TEMP1Plate),	
+																			TO(TEMPPlate),	
 
 
        // right hand
@@ -184,7 +189,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_LEFT,	KC_DOWN,	KC_UP,	KC_RIGHT,	KC_MINUS,	KC_DELETE,	
 		KC_NO,	KC_PGDOWN,	KC_PIPE,	KC_LBRACKET,	KC_RBRACKET,	KC_BSLASH,	KC_RSHIFT,	
 				KC_NO,	QK_RGUI,	KC_NO,	KC_NO,	KC_BSLASH,	
-		M(2),	TO(TEMP5Plate),	
+		M(2),	TO(TEMQPlate),	
 		KC_NO,	
 		TO(HHKBPlate),	
 			KC_ENTER,	KC_ESCAPE	
@@ -286,7 +291,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	ZEROReturn,	
 		_______,	KC_CIRC,	KC_AMPR,	KC_ASTR,	KC_LPRN,	KC_RPRN,	RSFT_T(_______),	
 			_______,	_______,	_______,	_______,	_______,	
-		RESET,	TO(TEMP1Plate),	
+		RESET,	TO(TEMPPlate),	
 		_______,	
 		_______,	
 			_______,	M(2)	
@@ -316,7 +321,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 // temp
-[TEMP5Plate] = LAYOUT_ergodox(
+[TEMQPlate] = LAYOUT_ergodox(
 
        // left hand
 		KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
@@ -371,7 +376,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		XXXXXXX,	KC_F1,	KC_F2,	KC_F3,	KC_F4,	KC_F5,	XXXXXXX,	
 		KC_ENTER,	KC_1,	KC_2,	KC_3,	KC_4,	KC_5,	
 		SFT_T(XXXXXXX),	JP_EXLM,	JP_DQT,	JP_HASH,	JP_DLR,	JP_PERC,	XXXXXXX,	
-		TO(TEMP1Plate),	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	
+		TO(TEMPPlate),	XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	
 														TO(BASEPlate),	RESET,	
 																		XXXXXXX,	
 														XXXXXXX,	XXXXXXX,	
@@ -384,7 +389,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		XXXXXXX,	KC_F6,	KC_F7,	KC_F8,	KC_F9,	KC_F10,	KC_F11,	
 			KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	XXXXXXX,	
 		XXXXXXX,	JP_AMPR,	JP_QUOT,	JP_LPRN,	JP_RPRN,	XXXXXXX,	RESET,	
-			XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	TO(TEMP9Plate),	
+			XXXXXXX,	XXXXXXX,	XXXXXXX,	XXXXXXX,	TO(TEMSPlate),	
 		RESET,	XXXXXXX,	
 		ENG,	
 		XXXXXXX,	
@@ -416,7 +421,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 // temp
-[TEMP7Plate] = LAYOUT_ergodox(
+[TEMRPlate] = LAYOUT_ergodox(
 
        // left hand
 		KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
@@ -447,21 +452,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: WindowsBasic JapLayer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | LGUI   |   1  |   2  |   3  |   4  |   5  | Bkspc|           |  Del |   6  |   7  |   8  |   9  |   0  |   \|   |
+ * | LGUI   |   1  |   2  |   3  |   4  |   5  | Bkspc|           |  Del |   6  |   7  |   8  |   9  |   0  |   ¥|   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |  ENG |           |  ]}  |   Y  |   U  |   I  |   O  |   P  |   =+   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | ~L10   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;: |   '"   |
+ * | ‾L10   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;: |   '"   |
  * |--------+------+------+------+------+------|      |           | Del  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  /?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | `~   |  '"  | Space| Enter| LCtrl|                             | L1/Space | RGui |LClick|RClick|  ~L3/Enter |
+ *   | `‾   |  '"  | Space| Enter| LCtrl|                             | L1/Space | RGui |LClick|RClick|  ‾L3/Enter |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Tab  | Esc  |       | LT(5) | RESET|
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | ZEROReturn | | TO(9)|        |      |
- *                                 | ~L8  |LAlt  |------|       |------|  Enter | RAlt |
+ *                                 | ‾L8  |LAlt  |------|       |------|  Enter | RAlt |
  *                                 | Esc  |      | Enter|       | Tab  |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -490,8 +495,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______,	_______,	_______,	_______,	_______,	_______,	_______,	
 				_______,	_______,	_______,	_______,	LT(HHKBPlate, M(2)),	
 		// 親指部分
-		LT(TEMP5Plate, KC_NO),	RESET,	
-		TO(TEMP9Plate),	
+		LT(TEMQPlate, KC_NO),	RESET,	
+		TO(TEMSPlate),	
 		_______,	
 			_______,	_______	
 
@@ -508,7 +513,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |------|           |------|      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |        | GUI  |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      | RGUI |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -521,7 +526,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 // temp
-[TEMP9Plate] = LAYOUT_ergodox(
+[TEMSPlate] = LAYOUT_ergodox(
 
        // left hand
 		KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	KC_NO,	
@@ -554,7 +559,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,---------------------------------------------------.           ,--------------------------------------------------.
  * |  Esc    |  F1  |  F2  |  F3  |  F4  |  F5  |  F11 |           | F12  |  F6  |  F7  |  F8  |  F9  |  F10 |  Fject |
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
- * |  `~     | Home |      | End  | PgUp | Tab  |  +   |           |      | VolUp| Lclk |Middle| Rclk |      |  Play  |
+ * |  `‾     | Home |      | End  | PgUp | Tab  |  +   |           |      | VolUp| Lclk |Middle| Rclk |      |  Play  |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | 予約済み| Del  |      |      | PgDn |      |------|           |------|MsLeft|MsDown| MsUp |MsRght|      |  Stop  |
  * |---------+------+------+------+------+------|ZERO  |           |      |------+------+------+------+------+--------|
@@ -669,8 +674,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	case JAP:
 		if (record->event.pressed) {
 			// キー押下時に動く
-			default_layer_set(JAPBASEPlate);
-			layer_move(JAPBASEPlate);
+			default_layer_set(1UL<<JAPBASEPlate);
+//			layer_move(JAPBASEPlate);
 		}
 		else {
 			// キー押上時に動く
@@ -682,8 +687,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	case ENG:
 		if (record->event.pressed) {
 			// キー押下時に動く
-	default_layer_set(BASEPlate);
-	layer_move(BASEPlate);
+			default_layer_set(1UL<<BASEPlate);
+//	layer_move(BASEPlate);
 		}
 		else {
 			// キー押上時に動く
